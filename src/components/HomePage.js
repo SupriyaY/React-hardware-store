@@ -1,29 +1,30 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 
-class Homepage extends Component {
+class HomePage extends Component {
 
-constructor() {
-super();
+    constructor() {
+        super();
 
-this.state = {
+        this.state = {
+            itemCurrentlyOnSale: 'A Hammer'
+        };
+    }
 
-itemCurrentlyOnSale: 'A Hammer'
-
-};
+    render() {
+        return (
+            <div>
+                <h1>My Hardware Store</h1>
+                <div>
+                    <span>Currently On Sale: {this.state.itemCurrentlyOnSale}!</span>
+                    <span>
+                        <button>Edit Sale Item</button>
+                    </span>
+                    <div>
+                        <input type="text"/>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }
-
-
-render() {
-return(
-    <div>
-<div>My Hardware Store</div>
-
-<div>Currently on Sale:{this.state.itemCurrentlyOnSale}!</div>
-
-</div>
-
-)
-}
-}
-
-export default Homepage;
+export default HomePage;
